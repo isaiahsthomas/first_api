@@ -8,6 +8,12 @@ require('dotenv').config({
 });
 const app = express()
 
+app.get('/', (req, res) => {
+    res.send("hello world")
+})
+
+app.listen(PORT, () => console.log(`app listening on port ${PORT}`));
+
 const pool = new Pool({
     user: process.env.USER,
     host: process.env.HOST,
